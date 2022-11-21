@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Art Gallery</title>
+	<style>
+		#selection {
+			position: sticky;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			width: 100%;
+			top: 100%;
+			z-index: 999;
+		}
+		#selection > div {
+			height: 10px;
+			width: 10px;
+			border: 1px solid white;
+		}
+	</style>
+	
+	<link rel="stylesheet" href="./main.css">
+</head>
+<body>
+	<canvas id="three-canvas"></canvas>
+	<audio src="./music/Music3.mp3" autoplay loop controls onloadstart="this.volume=0.3" id="myAudio" hidden="true">오디오 지원되지 않는 브라우저</audio>
+	<!-- div이용해서 crosshair 위치 조절 / 오디오 삭제시 px수정 필요-->
+	<div style="height: 390px"> 
+		<div>
+		</div>
+	</div>
+	<!-- crosshair -->
+	<div id="selection"> 
+		<div>
+		</div>
+	</div>
+</body>
+</html>
